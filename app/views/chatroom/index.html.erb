@@ -10,37 +10,16 @@
             <div class="twelve wide column ">
             <div class="ui card fluid raised chatbox">
             <div class="content">
-                <div class="ui small feed">
-                
+            <div class="ui small feed">
+               <% @messages.each do |message| %>
                 <div class="event">
                     <div class="content">
                     <div class="summary">
-                        <em>Elliot Fu</em> added <em>Jenny Hess</em> as a friend
+                        <p><%= message.body %></p>
                     </div>
                     </div>
                 </div>
-                <div class="event">
-                    <div class="content">
-                    <div class="summary">
-                        <em>Stevie Feliciano</em> added <em>Elliot Fu</em> as a friend
-                    </div>
-                    </div>
-                </div>
-                <div class="event">
-                    <div class="content">
-                    <div class="summary">
-                        <em>Helen Troy</em> added <em>Christian Rocha</em> as a friend
-                    </div>
-                    </div>
-                </div>
-                <div class="event">
-                    <div class="content">
-                    <div class="summary">
-                        <em>Christian Rocha</em> signed up for the  site.
-                    </div>
-                    </div>
-                </div>
-
+                <% end %>
                 </div>
             </div>
 
