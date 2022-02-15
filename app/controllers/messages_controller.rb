@@ -5,7 +5,7 @@ before_action :require_user
     message = current_user.messages.build(message_params)
     if message.save
       ActionCable.server.broadcast "chatroom_channel",
-                                    foo: message.body
+                                    mod_message: message_render(message)
     end
   end
 
